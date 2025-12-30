@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
   const { toast } = useToast();
@@ -19,16 +20,39 @@ export const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const res = await emailjs.send(
+        "service_9mfj0wh",
+        "template_241qcnv",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          email: formData.email,
+        },
+        "p8_PbtWdqqOUxMKUE"
+      );
 
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
+      console.log("res-----", res);
 
-    setFormData({ name: "", email: "", phone: "", message: "" });
-    setIsSubmitting(false);
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      console.log("error----", error);
+
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -39,12 +63,10 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="py-20 lg:py-32 relative overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 dot-pattern opacity-20" />
       <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] translate-x-1/2" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             Get In Touch
@@ -59,7 +81,6 @@ export const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
-          {/* Contact Info */}
           <div className="lg:col-span-2 space-y-8">
             <div>
               <h3 className="text-xl font-heading font-semibold mb-6">
@@ -112,7 +133,6 @@ export const Contact = () => {
               </div>
             </div>
 
-            {/* CTA Card */}
             <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/20">
               <h4 className="font-heading font-semibold mb-2">
                 Need Immediate Assistance?
@@ -127,7 +147,6 @@ export const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="lg:col-span-3">
             <form
               onSubmit={handleSubmit}
