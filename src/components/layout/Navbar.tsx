@@ -69,8 +69,8 @@ export const Navbar = () => {
             onClick={() => handleNavClick("#home", false)}
           >
             {/* <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm lg:text-base">
-                AI
+              <span className="text-primary-foreground font-bold text-sm lg:text-xs">
+                Avin
               </span>
             </div> */}
             <span className="gradient-text">AVIN lab</span>
