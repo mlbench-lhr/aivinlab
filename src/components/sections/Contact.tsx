@@ -50,11 +50,11 @@ export const Contact = () => {
             Get In Touch
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
-            Let's Talk About Your{" "}
-            <span className="gradient-text">Project</span>
+            Let's Talk About Your <span className="gradient-text">Project</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Have a question? Our team is ready to support your vision. Fill in the form and we'll get back to you within 24 hours.
+            Have a question? Our team is ready to support your vision. Fill in
+            the form and we'll get back to you within 24 hours.
           </p>
         </div>
 
