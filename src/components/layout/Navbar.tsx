@@ -58,7 +58,7 @@ export const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg"
-          : "bg-transparent"
+          : "bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg"
       }`}
     >
       <nav className="container mx-auto px-4 lg:px-8">
@@ -114,7 +114,7 @@ export const Navbar = () => {
         {/* Mobile Menu */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? "max-h-[400px] pb-6" : "max-h-0"
+            isMobileMenuOpen ? "max-h-[100vh] pb-6" : "max-h-0"
           }`}
         >
           <div className="flex flex-col gap-2 pt-4">
