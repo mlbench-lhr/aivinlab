@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* AIVinLab Design System - Dark Futuristic Tech Theme */
+/* AVIN lab Design System - Dark Futuristic Tech Theme */
 
 @layer base {
   :root {
@@ -46,10 +46,27 @@
     --radius: 0.75rem;
 
     /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(187 85% 53%) 0%, hsl(217 91% 60%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(222 47% 8%) 0%, hsl(222 47% 4%) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsl(187 85% 53% / 0.15) 0%, transparent 70%);
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 6%) 0%, hsl(222 47% 10%) 50%, hsl(222 47% 6%) 100%);
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(187 85% 53%) 0%,
+      hsl(217 91% 60%) 100%
+    );
+    --gradient-dark: linear-gradient(
+      180deg,
+      hsl(222 47% 8%) 0%,
+      hsl(222 47% 4%) 100%
+    );
+    --gradient-glow: radial-gradient(
+      ellipse at center,
+      hsl(187 85% 53% / 0.15) 0%,
+      transparent 70%
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(222 47% 6%) 0%,
+      hsl(222 47% 10%) 50%,
+      hsl(222 47% 6%) 100%
+    );
 
     /* Shadows */
     --shadow-glow: 0 0 60px hsl(187 85% 53% / 0.2);
@@ -86,7 +103,12 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading tracking-tight;
   }
 }
@@ -116,13 +138,14 @@
   }
 
   .gradient-border::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
     padding: 1px;
     background: var(--gradient-primary);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -134,7 +157,7 @@
   }
 
   .service-card::before {
-    content: '';
+    content: "";
     @apply absolute inset-0 opacity-0 transition-opacity duration-500;
     background: var(--gradient-glow);
   }
@@ -155,15 +178,20 @@
 
   /* Grid pattern background */
   .grid-pattern {
-    background-image: 
-      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+    background-image: linear-gradient(
+        hsl(var(--border) / 0.3) 1px,
+        transparent 1px
+      ),
       linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
   /* Dot pattern */
   .dot-pattern {
-    background-image: radial-gradient(hsl(var(--muted-foreground) / 0.15) 1px, transparent 1px);
+    background-image: radial-gradient(
+      hsl(var(--muted-foreground) / 0.15) 1px,
+      transparent 1px
+    );
     background-size: 24px 24px;
   }
 }
@@ -204,7 +232,8 @@
 
 /* Keyframe animations */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -213,7 +242,8 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.5;
     transform: scale(1);
   }
@@ -246,7 +276,8 @@
 }
 
 @keyframes gradient-shift {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {

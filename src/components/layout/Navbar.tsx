@@ -29,7 +29,7 @@ export const Navbar = () => {
 
   const handleNavClick = (href: string, isRoute: boolean) => {
     setIsMobileMenuOpen(false);
-    
+
     if (isRoute) {
       navigate(href);
       return;
@@ -68,10 +68,12 @@ export const Navbar = () => {
             className="flex items-center gap-2 text-xl lg:text-2xl font-heading font-bold"
             onClick={() => handleNavClick("#home", false)}
           >
-            <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm lg:text-base">AI</span>
-            </div>
-            <span className="gradient-text">AIVinLab</span>
+            {/* <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-sm lg:text-base">
+                AI
+              </span>
+            </div> */}
+            <span className="gradient-text">AVIN lab</span>
           </button>
 
           {/* Desktop Navigation */}

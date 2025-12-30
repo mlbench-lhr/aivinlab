@@ -36,14 +36,19 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <a href="#home" className="flex items-center gap-2 text-xl font-heading font-bold mb-4">
+            <a
+              href="#home"
+              className="flex items-center gap-2 text-xl font-heading font-bold mb-4"
+            >
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                 <span className="text-primary-foreground font-bold">AI</span>
               </div>
-              <span className="gradient-text">AIVinLab</span>
+              <span className="gradient-text">AVIN lab</span>
             </a>
             <p className="text-muted-foreground mb-6 max-w-sm">
-              We help innovative businesses and startups build their digital products using AI, Machine Learning, and cutting-edge web technologies.
+              We help innovative businesses and startups build their digital
+              products using AI, Machine Learning, and cutting-edge web
+              technologies.
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
@@ -116,7 +121,7 @@ export const Footer = () => {
         <div className="container mx-auto px-4 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} AIVinLab. All rights reserved.
+              © {new Date().getFullYear()} AVIN lab. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground">
               Crafted with passion in Pakistan

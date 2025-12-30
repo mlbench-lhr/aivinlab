@@ -1,91 +1,100 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { Users, Target, Award, Lightbulb, Linkedin, Twitter, Mail } from "lucide-react";
+import {
+  Users,
+  Target,
+  Award,
+  Lightbulb,
+  Linkedin,
+  Twitter,
+  Mail,
+} from "lucide-react";
 
 const partners = [
   {
-    name: "Partner Name 1",
+    name: "Leo",
     role: "Co-Founder & CEO",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
-    bio: "Visionary leader with 10+ years in AI/ML and enterprise solutions.",
-    linkedin: "#",
-    twitter: "#",
-    email: "partner1@aivinlab.com"
-  },
-  {
-    name: "Partner Name 2",
-    role: "Co-Founder & CTO",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    bio: "Technical architect specializing in scalable systems and machine learning.",
-    linkedin: "#",
-    twitter: "#",
-    email: "partner2@aivinlab.com"
-  },
-  {
-    name: "Partner Name 3",
-    role: "Chief Operations Officer",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
+    image:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
     bio: "Operations expert driving efficiency and delivering exceptional client experiences.",
     linkedin: "#",
     twitter: "#",
-    email: "partner3@aivinlab.com"
+    email: "partner3@aivinlab.com",
   },
   {
-    name: "Partner Name 4",
-    role: "Head of Design & Strategy",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
-    bio: "Creative strategist blending design thinking with business innovation.",
-    linkedin: "#",
+    name: "Nabeel Hassan",
+    role: "Partner",
+    image: "/nabeel.png",
+    bio: "Visionary leader with 10+ years in AI/ML and enterprise solutions.",
+    linkedin: "https://www.linkedin.com/in/nabeel-hassan-365778136/s",
     twitter: "#",
-    email: "partner4@aivinlab.com"
-  }
+    email: "partner1@aivinlab.com",
+  },
+  {
+    name: "Qazi Ammar Arshad",
+    role: "Partner",
+    image: "/ammar.png",
+    bio: "Technical architect specializing in scalable systems and machine learning.",
+    linkedin: "https://www.linkedin.com/in/qazi-ammar-arshad-a24895123/",
+    twitter: "#",
+    email: "partner2@aivinlab.com",
+  },
 ];
 
 const values = [
   {
     icon: Lightbulb,
     title: "Innovation First",
-    description: "We push boundaries and embrace cutting-edge technologies to deliver transformative solutions."
+    description:
+      "We push boundaries and embrace cutting-edge technologies to deliver transformative solutions.",
   },
   {
     icon: Target,
     title: "Client-Centric",
-    description: "Your success is our priority. We build lasting partnerships through transparent communication."
+    description:
+      "Your success is our priority. We build lasting partnerships through transparent communication.",
   },
   {
     icon: Award,
     title: "Excellence",
-    description: "We maintain the highest standards in code quality, design, and project delivery."
+    description:
+      "We maintain the highest standards in code quality, design, and project delivery.",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "Great solutions emerge from diverse perspectives and seamless teamwork."
-  }
+    description:
+      "Great solutions emerge from diverse perspectives and seamless teamwork.",
+  },
 ];
 
 export default function About() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1s" }} />
-        
+        <div
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-pulse-glow"
+          style={{ animationDelay: "1s" }}
+        />
+
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block px-4 py-2 mb-6 text-sm font-medium text-primary bg-primary/10 border border-primary/20 rounded-full">
-              About AIVinLab
+              About AVIN lab
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Building the Future with{" "}
               <span className="gradient-text">AI & Innovation</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              We're a passionate team of engineers, designers, and strategists dedicated to transforming ideas into powerful digital solutions that drive real business impact.
+              We're a passionate team of engineers, designers, and strategists
+              dedicated to transforming ideas into powerful digital solutions
+              that drive real business impact.
             </p>
           </div>
         </div>
@@ -100,18 +109,27 @@ export default function About() {
                 Our Story
               </span>
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-                From Vision to{" "}
-                <span className="gradient-text">Reality</span>
+                From Vision to <span className="gradient-text">Reality</span>
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded with a vision to democratize cutting-edge technology, AIVinLab emerged from the collective experience of industry veterans who saw the transformative potential of AI and modern software development.
+                  Founded with a vision to democratize cutting-edge technology,
+                  AVIN lab emerged from the collective experience of industry
+                  veterans who saw the transformative potential of AI and modern
+                  software development.
                 </p>
                 <p>
-                  Today, we've grown into a full-service technology partner, helping startups and enterprises alike navigate the complex landscape of digital transformation. Our expertise spans AI/ML solutions, mobile applications, web development, and UI/UX design.
+                  Today, we've grown into a full-service technology partner,
+                  helping startups and enterprises alike navigate the complex
+                  landscape of digital transformation. Our expertise spans AI/ML
+                  solutions, mobile applications, web development, and UI/UX
+                  design.
                 </p>
                 <p>
-                  What sets us apart is our commitment to understanding your unique challenges and crafting tailored solutions that not only meet your current needs but scale with your future ambitions.
+                  What sets us apart is our commitment to understanding your
+                  unique challenges and crafting tailored solutions that not
+                  only meet your current needs but scale with your future
+                  ambitions.
                 </p>
               </div>
             </div>
@@ -119,20 +137,36 @@ export default function About() {
               <div className="glass-card p-8 rounded-2xl">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-4">
-                    <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">50+</div>
-                    <div className="text-sm text-muted-foreground">Projects Delivered</div>
+                    <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">
+                      50+
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Projects Delivered
+                    </div>
                   </div>
                   <div className="text-center p-4">
-                    <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">5+</div>
-                    <div className="text-sm text-muted-foreground">Years Experience</div>
+                    <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">
+                      5+
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Years Experience
+                    </div>
                   </div>
                   <div className="text-center p-4">
-                    <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">30+</div>
-                    <div className="text-sm text-muted-foreground">Happy Clients</div>
+                    <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">
+                      30+
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Happy Clients
+                    </div>
                   </div>
                   <div className="text-center p-4">
-                    <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">15+</div>
-                    <div className="text-sm text-muted-foreground">Team Members</div>
+                    <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">
+                      15+
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Team Members
+                    </div>
                   </div>
                 </div>
               </div>
@@ -152,10 +186,11 @@ export default function About() {
               What <span className="gradient-text">Drives Us</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our core values shape every decision we make and every solution we deliver.
+              Our core values shape every decision we make and every solution we
+              deliver.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <div
@@ -166,7 +201,9 @@ export default function About() {
                   <value.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{value.title}</h3>
-                <p className="text-sm text-muted-foreground">{value.description}</p>
+                <p className="text-sm text-muted-foreground">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>
@@ -181,14 +218,16 @@ export default function About() {
               Leadership Team
             </span>
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-              Meet Our <span className="gradient-text">Associated Partners</span>
+              Meet Our{" "}
+              <span className="gradient-text">Associated Partners</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              The visionaries and experts leading AIVinLab towards innovation and excellence.
+              The visionaries and experts leading AVIN lab towards innovation
+              and excellence.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {partners.map((partner, index) => (
               <div
                 key={index}
@@ -198,14 +237,18 @@ export default function About() {
                   <img
                     src={partner.image}
                     alt={partner.name}
-                    className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="bg-[#e0e5f1] w-full aspect-square object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
                 </div>
                 <div className="p-6 -mt-12 relative z-10">
                   <h3 className="text-xl font-semibold mb-1">{partner.name}</h3>
-                  <p className="text-primary text-sm font-medium mb-3">{partner.role}</p>
-                  <p className="text-sm text-muted-foreground mb-4">{partner.bio}</p>
+                  <p className="text-primary text-sm font-medium mb-3">
+                    {partner.role}
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {partner.bio}
+                  </p>
                   <div className="flex gap-3">
                     <a
                       href={partner.linkedin}

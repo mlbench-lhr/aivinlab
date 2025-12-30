@@ -25,7 +25,7 @@ const steps = [
   {
     number: "04",
     icon: Code2,
-    title: "Development & Execution",
+    title: "Development",
     description:
       "We implement plans with confidence, utilizing resources and technology to achieve goals via smart planning and execution.",
   },
@@ -40,7 +40,10 @@ const steps = [
 
 export const Approach = () => {
   return (
-    <section id="approach" className="py-20 lg:py-32 relative overflow-hidden bg-card">
+    <section
+      id="approach"
+      className="py-20 lg:py-32 relative overflow-hidden bg-card"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 grid-pattern opacity-20" />
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px] -translate-y-1/2" />
@@ -54,11 +57,11 @@ export const Approach = () => {
             Our Process
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
-            Our Approach to{" "}
-            <span className="gradient-text">Your Goals</span>
+            Our Approach to <span className="gradient-text">Your Goals</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            With our dynamic strategy that integrates innovative techniques for unparalleled outcomes, you can streamline your path to success.
+            With our dynamic strategy that integrates innovative techniques for
+            unparalleled outcomes, you can streamline your path to success.
           </p>
         </div>
 
