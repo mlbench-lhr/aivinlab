@@ -40,9 +40,9 @@ export const Footer = () => {
               href="#home"
               className="flex items-center gap-2 text-xl font-heading font-bold mb-4"
             >
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              {/* <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                 <span className="text-primary-foreground font-bold">AI</span>
-              </div>
+              </div> */}
               <span className="gradient-text">AVIN lab</span>
             </a>
             <p className="text-muted-foreground mb-6 max-w-sm">
