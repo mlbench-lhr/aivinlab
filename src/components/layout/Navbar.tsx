@@ -1,19 +1,23 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Approach", href: "#approach" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "#home", isRoute: false },
+  { label: "About", href: "/about", isRoute: true },
+  { label: "Services", href: "#services", isRoute: false },
+  { label: "Approach", href: "#approach", isRoute: false },
+  { label: "Portfolio", href: "#portfolio", isRoute: false },
+  { label: "Testimonials", href: "#testimonials", isRoute: false },
+  { label: "Contact", href: "#contact", isRoute: false },
 ];
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,12 +27,30 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
+  const handleNavClick = (href: string, isRoute: boolean) => {
+    setIsMobileMenuOpen(false);
+    
+    if (isRoute) {
+      navigate(href);
+      return;
+    }
+
+    // If we're not on home page and clicking a section link, go home first
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+      return;
+    }
+
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -42,26 +64,22 @@ export const Navbar = () => {
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a
-            href="#home"
+          <button
             className="flex items-center gap-2 text-xl lg:text-2xl font-heading font-bold"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("#home");
-            }}
+            onClick={() => handleNavClick("#home", false)}
           >
             <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm lg:text-base">AI</span>
             </div>
             <span className="gradient-text">AIVinLab</span>
-          </a>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <button
                 key={link.label}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => handleNavClick(link.href, link.isRoute)}
                 className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
               >
                 {link.label}
@@ -75,7 +93,7 @@ export const Navbar = () => {
             <Button
               variant="hero"
               size="default"
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => handleNavClick("#contact", false)}
             >
               Get Free Consultation
             </Button>
@@ -101,7 +119,7 @@ export const Navbar = () => {
             {navLinks.map((link) => (
               <button
                 key={link.label}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => handleNavClick(link.href, link.isRoute)}
                 className="px-4 py-3 text-left text-foreground hover:text-primary hover:bg-secondary/50 rounded-lg transition-colors"
               >
                 {link.label}
@@ -111,7 +129,7 @@ export const Navbar = () => {
               variant="hero"
               size="lg"
               className="mt-4"
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => handleNavClick("#contact", false)}
             >
               Get Free Consultation
             </Button>
