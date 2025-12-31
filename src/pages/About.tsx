@@ -22,9 +22,9 @@ const partners = [
   },
   {
     name: "Vivien Konca",
-    role: "Co-Founder",
+    role: "Business Developer",
     image: "/vivien.jpeg",
-    bio: "If you want different tones (more corporate, more personal, more sales-driven), say the word.",
+    bio: "Driving growth through strategic partnerships, client acquisition, and market expansion.",
     linkedin: "#",
     twitter: "#",
     email: "partner3@aivinlab.com",
