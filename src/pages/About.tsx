@@ -14,7 +14,7 @@ const partners = [
   {
     name: "Giuseppe Leo",
     role: "Founder & amp",
-    image: "/leo.jpeg",
+    image: "/leo.png",
     bio: "Operations leader focused on driving efficiency and delivering exceptional client experiences.",
     linkedin: "#",
     twitter: "#",
@@ -23,7 +23,7 @@ const partners = [
   {
     name: "Vivien Konca",
     role: "Business Developer",
-    image: "/vivien.jpeg",
+    image: "/vivien.png",
     bio: "Driving growth through strategic partnerships, client acquisition, and market expansion.",
     linkedin: "#",
     twitter: "#",
@@ -241,11 +241,11 @@ export default function About() {
                 key={index}
                 className="glass-card rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300"
               >
-                <div className="relative overflow-hidden">
+                <div className="bg-[#e0e5f1] relative overflow-hidden">
                   <img
                     src={partner.image}
                     alt={partner.name}
-                    className="bg-[#e0e5f1] w-full aspect-square object-cover object-top group-hover:scale-100 transition-transform duration-500"
+                    className=" w-full aspect-square object-cover object-top mt-4 -mb-4 group-hover:scale-100 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
                 </div>
