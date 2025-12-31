@@ -31,7 +31,7 @@ const partners = [
   },
   {
     name: "Nabeel Hassan",
-    role: "Partner",
+    role: "Associate Partner",
     image: "/nabeel.png",
     bio: "Visionary leader with 10+ years in AI/ML and enterprise solutions.",
     linkedin: "https://www.linkedin.com/in/nabeel-hassan-365778136/s",
@@ -40,7 +40,7 @@ const partners = [
   },
   {
     name: "Qazi Ammar Arshad",
-    role: "Partner",
+    role: "Associate Partner",
     image: "/ammar.png",
     bio: "Technical architect specializing in scalable systems and machine learning.",
     linkedin: "https://www.linkedin.com/in/qazi-ammar-arshad-a24895123/",
