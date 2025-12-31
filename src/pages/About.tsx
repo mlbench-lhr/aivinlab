@@ -12,10 +12,18 @@ import {
 
 const partners = [
   {
-    name: "Leo",
-    role: "Co-Founder & CEO",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
+    name: "Giuseppe Leo",
+    role: "Founder & amp",
+    image: "/leo.jpeg",
+    bio: "Operations expert driving efficiency and delivering exceptional client experiences.",
+    linkedin: "#",
+    twitter: "#",
+    email: "partner3@aivinlab.com",
+  },
+  {
+    name: "Vivien Konca",
+    role: "Co-Founder",
+    image: "/vivien.jpeg",
     bio: "Operations expert driving efficiency and delivering exceptional client experiences.",
     linkedin: "#",
     twitter: "#",
@@ -227,7 +235,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {partners.map((partner, index) => (
               <div
                 key={index}
@@ -237,7 +245,7 @@ export default function About() {
                   <img
                     src={partner.image}
                     alt={partner.name}
-                    className="bg-[#e0e5f1] w-full aspect-square object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    className="bg-[#e0e5f1] w-full aspect-square object-cover object-top group-hover:scale-100 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
                 </div>
