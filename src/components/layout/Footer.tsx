@@ -8,10 +8,10 @@ const footerLinks = {
     { label: "UI/UX Design", href: "#services" },
   ],
   company: [
-    { label: "About Us", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Contact", href: "#contact" },
+    { label: "About Us", href: "/about" },
+    // { label: "Careers", href: "#" },
+    // { label: "Blog", href: "#" },
+    { label: "Contact", href: "/#contact" },
   ],
   resources: [
     { label: "Case Studies", href: "#portfolio" },
@@ -33,7 +33,7 @@ export const Footer = () => {
     <footer className="relative bg-card border-t border-border/50">
       {/* Main Footer */}
       <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <a
@@ -98,7 +98,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h4 className="font-heading font-semibold mb-4">Resources</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
@@ -112,7 +112,7 @@ export const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
 
