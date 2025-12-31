@@ -133,7 +133,7 @@ export const Contact = () => {
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/20">
+            {/* <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/20">
               <h4 className="font-heading font-semibold mb-2">
                 Need Immediate Assistance?
               </h4>
@@ -144,7 +144,7 @@ export const Contact = () => {
                 Book a Call
                 <ArrowRight size={16} className="ml-2" />
               </Button>
-            </div>
+            </div> */}
           </div>
 
           <div className="lg:col-span-3">
